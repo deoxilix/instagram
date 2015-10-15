@@ -1,15 +1,11 @@
 
-%centre
-  //%h1=Instagram
-%hr
-
 .posts-wrapper.row
   -@post.each do |post|
     .post
       .post-head
         .name
           deoxilix
+
+      =post.caption
       .image.center-block
         =link_to (image_tag post.image, class:'img-responsive'), post_path(post)
-      =post.caption
-      %br

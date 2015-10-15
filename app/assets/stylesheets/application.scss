@@ -20,15 +20,30 @@
  *= require_self
  */
 
+ // h1{
+ //   color: #125688;
+ //   text-indent: 110%;
+ //   background-image: url(https://instagramstatic-a.akamaihd.net/bluebar/8090b48/cache/sprites/core-sprites-22ebc2.png);
+ //   background-position: -186px -204px;
+ //   height: 28px;
+ //   width: 102px;
+ // }
+
  body{
    background-color: #fafafa;
    font-family: proxima-nova, 'Helvetica Neue', Arial, Helvetica, sana-serif;
  }
 
  .navbar-brand{
-   a{
-     color: #179abd
-   }
+     display: block;
+     color: #125688;
+     height: 28px;
+     width: 102px;
+     text-indent: 1000%;
+     background-image: url(https://instagramstatic-a.akamaihd.net/bluebar/8090b48/cache/sprites/core-sprites-22ebc2.png);
+     background-position: -186px -204px;
+     margin-top: 15px;
+     left: -2px;
  }
 
  .navbar-default {
@@ -69,6 +84,7 @@
    .thumbnail{}
    .name{
      display: block;
+     color: #125688
    }
  }
 
