@@ -39,7 +39,8 @@
      color: #125688;
      height: 28px;
      width: 102px;
-     text-indent: 1000%;
+     text-indent: 110%;
+     overflow: hidden;
      background-image: url(https://instagramstatic-a.akamaihd.net/bluebar/8090b48/cache/sprites/core-sprites-22ebc2.png);
      background-position: -186px -204px;
      margin-top: 15px;
@@ -94,9 +95,11 @@
  }
 
  .caption {
-   padding: 24px;
-   font-size: 15px;
-   line-height: 18px;
+  //  padding: 24px;
+  //  padding-left: 20px;
+  //  display: block;
+  //  font-size: 15px;
+  //  line-height: 18px;
  }
 
  .form-wrapper {
