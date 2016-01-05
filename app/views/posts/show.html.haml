@@ -1,0 +1,12 @@
+.posts-wrapper.row
+  .post
+    .post-head
+      .name
+        deoxilix
+
+    .image.center-block
+      = image_tag @post.image, class: 'img-responsive'
+    %p.caption
+      =@post.caption
+    .text-center
+      =link_to "Flow", posts_path
