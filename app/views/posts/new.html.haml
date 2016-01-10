@@ -1,6 +1,11 @@
+-# -if @post.errors.any?
+-# -#errors
+-#   %h2
+-#   =pluralize(@post.errors.count, "errors")
+-#   prevented this Post from completion!
 
 .form-wrapper
-  = simple_form_for @post, html: { class: 'form-horizontal', multipart: true } do |f|
+  =simple_form_for @post, html: { class: 'form-horizontal', multipart: true } do |f|
     .form-group
       =f.input :image
     .form-group.text-center

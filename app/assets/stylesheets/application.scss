@@ -30,7 +30,7 @@
  // }
 
  body{
-   background-color: #fafafa;
+   background-color: #f4f4f4;
    font-family: proxima-nova, 'Helvetica Neue', Arial, Helvetica, sana-serif;
  }
 
@@ -45,6 +45,8 @@
      background-position: -186px -204px;
      margin-top: 15px;
      left: -2px;
+     margin-background: -2px;
+     position: relative;
  }
 
  .navbar-default {
@@ -84,6 +86,7 @@
    line-height: 18px;
    .thumbnail{}
    .name{
+     font-weight: 600;
      display: block;
      color: #125688
    }
@@ -95,10 +98,10 @@
  }
 
  .caption {
-  //  padding: 24px;
+   padding: 5px 0px 20px 0px;
   //  padding-left: 20px;
   //  display: block;
-  //  font-size: 15px;
+   font-size: 14px;
   //  line-height: 18px;
  }
 

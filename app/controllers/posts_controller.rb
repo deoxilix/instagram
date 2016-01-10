@@ -5,7 +5,7 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.find(params[:id])
+    @post = find_instaPost
   end
 
   def new
@@ -13,14 +13,25 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.create(post_params)
-    redirect_to posts_path
+    @post = Post.new(post_params)
+    if @post.save
+      redirect_to @post
+    else
+      render 'new'
+    end
   end
 
   def edit
+    @post = find_instaPost
   end
 
   def update
+    @post = find_instaPost
+    if @post.update(post_params)
+      redirect_to post_path(find_instaPost)
+    else
+      render 'edit'
+    end
   end
 
   private
@@ -28,8 +39,8 @@ class PostsController < ApplicationController
     params.require(:post).permit(:image, :caption)
   end
 
-  def find_post
-		@post = Post.find(params[:id])
+  def find_instaPost
+		Post.find(params[:id])
 	end
 
 end

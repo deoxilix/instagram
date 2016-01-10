@@ -4,9 +4,12 @@
       .name
         deoxilix
 
+      .caption
+        = @post.caption
+
     .image.center-block
       = image_tag @post.image, class: 'img-responsive'
-    %p.caption
-      =@post.caption
-    .text-center
-      =link_to "Flow", posts_path
+    .text-right
+      =link_to "Edit", edit_post_path
+      |
+      =link_to "Flow", root_path

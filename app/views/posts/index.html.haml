@@ -7,7 +7,8 @@
           deoxilix
 
         .caption
-        =post.caption
+          = post.caption
+
       .image.center-block
         -# =link_to (image_tag post.image, class:'img-responsive'), post_path(post)
         = image_link_to post.image, post_path(post), class: 'img-responsive'
