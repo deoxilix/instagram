@@ -1,11 +1,12 @@
 class PostsController < ApplicationController
+  before_action :find_instaPost, only: [:show, :edit, :update, :destroy]
 
   def index
     @post = Post.all
   end
 
   def show
-    @post = find_instaPost
+    # @post = find_instaPost
   end
 
   def new
@@ -22,15 +23,24 @@ class PostsController < ApplicationController
   end
 
   def edit
-    @post = find_instaPost
+    # @post = find_instaPost
   end
 
   def update
-    @post = find_instaPost
+    # @post = find_instaPost
     if @post.update(post_params)
       redirect_to post_path(find_instaPost)
     else
       render 'edit'
+    end
+  end
+
+  def destroy
+    @post = find_instaPost
+    if @post.destroy
+      redirect_to root_path
+    else
+      render 'show'
     end
   end
 
@@ -40,7 +50,7 @@ class PostsController < ApplicationController
   end
 
   def find_instaPost
-		Post.find(params[:id])
+		@post = Post.find(params[:id])
 	end
 
 end
