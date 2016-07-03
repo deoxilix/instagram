@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  before_action :authenticate_user!
   before_action :find_instaPost, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -6,29 +7,29 @@ class PostsController < ApplicationController
   end
 
   def show
-    # @post = find_instaPost
   end
 
   def new
-    @post = Post.new
+    @post = current_user.posts.build
   end
 
   def create
-    @post = Post.new(post_params)
+    @post = current_user.posts.build(post_params)
     if @post.save
-      redirect_to @post
+      # flash[:success] = "Post Successful!"
+      redirect_to @post, notice: "Post Successful!"
     else
-      render 'new'
+      flash.now[:alert] = "Your Post could not be created! Please check the form!!"
+      render :new
     end
   end
 
   def edit
-    # @post = find_instaPost
   end
 
   def update
-    # @post = find_instaPost
     if @post.update(post_params)
+      flash[:success] = "Post updated!"
       redirect_to post_path(find_instaPost)
     else
       render 'edit'
@@ -50,7 +51,7 @@ class PostsController < ApplicationController
   end
 
   def find_instaPost
-		@post = Post.find(params[:id])
+	   @post = Post.find(params[:id])
 	end
 
 end

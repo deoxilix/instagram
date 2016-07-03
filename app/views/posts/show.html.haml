@@ -2,7 +2,7 @@
   .post
     .post-head
       .name
-        deoxilix
+        = @post.user.user_name
 
       .caption
         = @post.caption
@@ -10,8 +10,6 @@
     .image.center-block
       = image_tag @post.image, class: 'img-responsive'
     .text-right
-      =link_to "Edit", edit_post_path
-      |
-      =link_to "Delete", post_path(@post), method: :delete, data: { confirm: "Are you sure?" }
-      |
-      =link_to "Flow", root_path
+      =link_to "Edit", edit_post_path, class: 'btn btn-default btn-xs'
+      =link_to "Delete", post_path(@post), method: :delete, data: { confirm: "Are you sure?" }, class: 'btn btn-default btn-xs'
+      =link_to "Flow", root_path, class: 'btn btn-default btn-xs'

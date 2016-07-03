@@ -7,19 +7,14 @@
 
 .posts-wrapper.row
   .post
+    .post-head
+      .caption
+        = @post.caption
     .image.center-block
       = image_tag @post.image, class: 'img-responsive'
 
+    =render 'form'
 
-    .form-wrapper
-      =simple_form_for @post, html: { class: 'form-horizontal', multipart: true } do |f|
-        .form-group
-          =f.input :image
-        .form-group.text-center
-          =f.input :caption
-        .form-group.text-center
-          =f.button :submit, class: 'btn-success'
-
-      =link_to "Delete", post_path(@post), method: :delete, data: { confirm: "Are you sure?" }
-      |
-      =link_to "Cancel", root_path
+    =link_to "Delete", post_path(@post), method: :delete, data: { confirm: "Are you sure?" }
+    |
+    =link_to "Cancel", root_path

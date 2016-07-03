@@ -34,11 +34,14 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 #Paperclip
 gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
 
+#Devise
+gem 'devise'
+
 #SimpleForm
 gem 'simple_form'
 
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
 
 # Use Unicorn as the app server
 # gem 'unicorn'

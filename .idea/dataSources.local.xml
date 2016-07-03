@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="Rails instagram: development" uuid="0cfe92f9-137a-4537-aa23-0f82d4c90e30">
+      <auth-required>false</auth-required>
+      <first-sync>true</first-sync>
+    </data-source>
+    <data-source name="Rails instagram: test" uuid="ebd14b3e-9577-4148-8ec4-18be7f26cd6c" />
+  </component>
+</project>
